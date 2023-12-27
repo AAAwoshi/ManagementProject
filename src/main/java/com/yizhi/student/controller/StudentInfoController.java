@@ -48,11 +48,16 @@ public class StudentInfoController {
 	@GetMapping("/list")
 	@RequiresPermissions("student:studentInfo:studentInfo")
 	public PageUtils list(@RequestParam Map<String, Object> params){
-
-		return null;
-
+		if (params.get("sort")!=null) {
+			params.put("sort",BeanHump.camelToUnderline(params.get("sort").toString()));
+		}
+		//查询列表数据
+		Query query = new Query(params);
+		List<StudentInfoDO> stuList = studentInfoService.list(query);
+		int total = studentInfoService.count(query);
+		PageUtils pageUtils = new PageUtils(stuList, total,query.getCurrPage(),query.getPageSize());
+		return pageUtils;
 	}
-
 
 	/**
 	 * 修改
@@ -62,8 +67,8 @@ public class StudentInfoController {
 	@PostMapping("/update")
 	@RequiresPermissions("student:studentInfo:edit")
 	public R update(StudentInfoDO studentInfo){
-
-		return null;
+		studentInfoService.update(studentInfo);
+		return R.ok();
 	}
 
 	/**
@@ -74,7 +79,7 @@ public class StudentInfoController {
 	@ResponseBody
 	@RequiresPermissions("student:studentInfo:remove")
 	public R remove( Integer id){
-		return null;
+		return studentInfoService.remove(id) > 0 ? R.ok() : R.error();
 	}
 	
 	/**
@@ -85,10 +90,22 @@ public class StudentInfoController {
 	@ResponseBody
 	@RequiresPermissions("student:studentInfo:batchRemove")
 	public R remove(@RequestParam("ids[]") Integer[] ids){
-
-		return null;
+		studentInfoService.batchRemove(ids);
+		return R.ok();
 	}
 
+	/**
+	 * 保存
+	 * @param studentInfoDO
+	 * @return
+	 */
+	@Log("学生信息保存")
+	@ResponseBody
+	@PostMapping("/save")
+	@RequiresPermissions("student:studentInfo:add")
+	public R save(StudentInfoDO studentInfoDO){
+		return studentInfoService.save(studentInfoDO) > 0 ? R.ok() : R.error();
+	}
 
 	//前后端不分离 客户端 -> 控制器-> 定位视图
 	/**
