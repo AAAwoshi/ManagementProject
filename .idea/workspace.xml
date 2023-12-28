@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0d5cea6-eba5-4063-aaf1-2f815996b3d3" name="Default Changelist" comment="finish">
+    <list default="true" id="d0d5cea6-eba5-4063-aaf1-2f815996b3d3" name="Default Changelist" comment="SpringBootApplication 中已经定义 EnableAutoConfiguration。直接由 SpringBootApplication 排除 SecurityAutoConfiguration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yizhi/yizhiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yizhi/yizhiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,17 +89,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="yizhiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="yizhi-test" />
       <extension name="coverage">
@@ -148,7 +137,9 @@
       <workItem from="1655186322192" duration="19000" />
       <workItem from="1703706958127" duration="1852000" />
       <workItem from="1703708849084" duration="16000" />
-      <workItem from="1703708992926" duration="4057000" />
+      <workItem from="1703708992926" duration="4103000" />
+      <workItem from="1703713255229" duration="430000" />
+      <workItem from="1703744218405" duration="82000" />
     </task>
     <task id="LOCAL-00001" summary="finish">
       <created>1703712600656</created>
@@ -157,11 +148,35 @@
       <option name="project" value="LOCAL" />
       <updated>1703712600656</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="SpringBootApplication 中已经定义 EnableAutoConfiguration。直接由 SpringBootApplication 排除 SecurityAutoConfiguration">
+      <created>1703713074492</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1703713074492</updated>
+    </task>
+    <task id="LOCAL-00003" summary="SpringBootApplication 中已经定义 EnableAutoConfiguration。直接由 SpringBootApplication 排除 SecurityAutoConfiguration">
+      <created>1703713100089</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1703713100089</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -177,7 +192,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="finish" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish" />
+    <MESSAGE value="SpringBootApplication 中已经定义 EnableAutoConfiguration。直接由 SpringBootApplication 排除 SecurityAutoConfiguration" />
+    <option name="LAST_COMMIT_MESSAGE" value="SpringBootApplication 中已经定义 EnableAutoConfiguration。直接由 SpringBootApplication 排除 SecurityAutoConfiguration" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
